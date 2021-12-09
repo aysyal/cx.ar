@@ -25,7 +25,7 @@ class _ObjectWithTextureAndRotationState
         body: Column(
           children: <Widget>[
             RotationSlider(
-              degreesPerSecondInitialValue: 90.0,
+              degreesPerSecondInitialValue: 10.0,
               onDegreesPerSecondChange: onDegreesPerSecondChange,
             ),
             Expanded(
@@ -45,7 +45,7 @@ class _ObjectWithTextureAndRotationState
   }
 
   Future _addSphere(ArCoreController controller) async {
-    final ByteData textureBytes = await rootBundle.load('assets/italia.png');
+    final ByteData textureBytes = await rootBundle.load('assets/earth.jpg');
 
     final material = ArCoreMaterial(
       color: Color.fromARGB(120, 66, 134, 244),
@@ -53,7 +53,7 @@ class _ObjectWithTextureAndRotationState
     );
     final sphere = ArCoreSphere(
       materials: [material],
-      radius: 0.1,
+      radius: 0.4,
     );
     node = ArCoreRotatingNode(
       shape: sphere,
