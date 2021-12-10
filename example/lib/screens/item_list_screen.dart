@@ -70,7 +70,9 @@ class ItemListScreen extends StatelessWidget {
                           onTap: (){
                             Navigator.push(context,  MaterialPageRoute(
                                 builder: (context) => ArViewScreen(
-                                  itemImg: items[index].pic ,
+                                  itemImg: items[index].pic,
+                                  items: items,
+                                  currentIndex: index,
                                 ),),);
                           },
                           child: Row(
