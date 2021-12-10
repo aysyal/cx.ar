@@ -6,22 +6,34 @@ class ItemListScreen extends StatelessWidget {
 
   List<ItemModel> items = [
     ItemModel(
+      "Single Sofa",
+      "Double Bed with 2 lamps",
+      "images/single_sofa.png",
+      12000,
+    ),
+    ItemModel(
       "DoubleBed",
       "Double Bed with 2 lamps",
-      "images/_white_sofa.png",
-      12000,
+      "images/bed_double.png",
+      13999,
     ),
     ItemModel(
       "Sofa",
       "Double Bed with 2 lamps",
-      "images/_white_sofa.png",
-      12000,
+      "images/sofa_grey.png",
+      11000,
+    ),
+    ItemModel(
+      "Single Sofa",
+      "Double Bed with 2 lamps",
+      "images/sofa_white.png",
+      10000,
     ),
     ItemModel(
       "Chair",
       "Double Bed with 2 lamps",
       "images/_white_sofa.png",
-      12000,
+      21899,
     )
   ];
   @override
