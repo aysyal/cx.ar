@@ -29,7 +29,7 @@ class _ArViewScreenState extends State<ArViewScreen>{
 
   void onNodeTapHandler(String name){
     arCoreController.removeNode(nodeName: name);
-    widget.currentIndex = widget.currentIndex+1 % widget.items.length;
+    widget.currentIndex = widget.currentIndex+1 % widget.items.length-1;
     addItemImagetoScene(hitTestResult);
   }
 
@@ -43,10 +43,11 @@ class _ArViewScreenState extends State<ArViewScreen>{
   Future addItemImagetoScene(ArCoreHitTestResult hitTestResult) async{
     final bytes  = (await rootBundle.load(widget.items[widget.currentIndex].pic)).buffer.asUint8List();
     final imageItem = ArCoreNode(
-      image: ArCoreImage(bytes: bytes, width: 600,height: 600),
+      image: ArCoreImage(bytes: bytes, width: 500,height: 500),
       position: hitTestResult.pose.translation + vector.Vector3(0.0, 0.0, 0.0),
       rotation: hitTestResult.pose.rotation + vector.Vector4(0.0, 0.0, 0.0, 0.0),
     );
+
     arCoreController.addArCoreNodeWithAnchor(imageItem);
 
     // final labelbytes = (await rootBundle.load(widget.items[widget.currentIndex].label_pic)).buffer.asUint8List();
