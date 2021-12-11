@@ -48,6 +48,14 @@ class _ArViewScreenState extends State<ArViewScreen>{
       rotation: hitTestResult.pose.rotation + vector.Vector4(0.0, 0.0, 0.0, 0.0),
     );
     arCoreController.addArCoreNodeWithAnchor(imageItem);
+
+    // final labelbytes = (await rootBundle.load(widget.items[widget.currentIndex].label_pic)).buffer.asUint8List();
+    // final labelItem = ArCoreNode(
+    //   image: ArCoreImage(bytes: labelbytes, width: 100,height: 50),
+    //   position: hitTestResult.pose.translation + vector.Vector3(25.0, 0.0, 0.0),
+    //   rotation: hitTestResult.pose.rotation + vector.Vector4(0.0, 0.0, 0.0, 0.0),
+    // );
+    // arCoreController.addArCoreNodeWithAnchor(labelItem);
   }
 
   @override

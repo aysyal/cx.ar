@@ -1,7 +1,9 @@
 class ItemModel{
-  String name, detail, pic;
+  String name, detail, pic, label_pic;
   int price;
 
-  ItemModel(this.name , this.detail, this.pic, this.price);
+  ItemModel(this.name , this.detail, this.pic, this.label_pic, this.price);
+
+
 
 }

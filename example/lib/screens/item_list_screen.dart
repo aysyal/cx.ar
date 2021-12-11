@@ -1,38 +1,44 @@
 import 'package:arcore_flutter_plugin_example/models/item_model.dart';
 import 'package:arcore_flutter_plugin_example/screens/ar_view_screen.dart';
+import 'package:arcore_flutter_plugin_example/screens/recommendationItem.dart';
 import 'package:flutter/material.dart';
 
 class ItemListScreen extends StatelessWidget {
 
-  List<ItemModel> items = [
+  final List<ItemModel> items = [
     ItemModel(
       "Single Sofa",
       "Double Bed with 2 lamps",
       "images/single_sofa.png",
+      "images/single_sofa_label.png",
       12000,
     ),
     ItemModel(
       "DoubleBed",
       "Double Bed with 2 lamps",
       "images/bed_double.png",
+      "images/single_sofa_label.png",
       13999,
     ),
     ItemModel(
       "Sofa",
       "Double Bed with 2 lamps",
       "images/sofa_grey.png",
+      "images/single_sofa_label.png",
       11000,
     ),
     ItemModel(
       "Single Sofa",
       "Double Bed with 2 lamps",
       "images/sofa_white.png",
+      "images/single_sofa_label.png",
       10000,
     ),
     ItemModel(
       "Chair",
       "Double Bed with 2 lamps",
       "images/_white_sofa.png",
+      "images/single_sofa_label.png",
       21899,
     )
   ];
@@ -69,11 +75,7 @@ class ItemListScreen extends StatelessWidget {
                         return GestureDetector(
                           onTap: (){
                             Navigator.push(context,  MaterialPageRoute(
-                                builder: (context) => ArViewScreen(
-                                  itemImg: items[index].pic,
-                                  items: items,
-                                  currentIndex: index,
-                                ),),);
+                                builder: (context) => RecommendationItem()));
                           },
                           child: Row(
                             children: <Widget>[
