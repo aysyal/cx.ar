@@ -78,7 +78,7 @@ class _RecommendationItemState extends State<RecommendationItem> {
       builder: (BuildContext context) => AlertDialog(
         content: Row(
           children: <Widget>[
-            Text(' Remove item ?'),
+            Text(' Remove item ..?'),
             IconButton(
                 icon: Icon(
                   Icons.delete,

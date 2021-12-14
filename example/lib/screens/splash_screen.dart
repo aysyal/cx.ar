@@ -12,7 +12,7 @@ class _MySplashScreenState  extends State<MySplashScreen> {
   @override
   Widget build(BuildContext context) {
     return SplashScreen(
-      seconds: 3,
+      seconds: 1,
       navigateAfterSeconds: ItemListScreen(),
       title:  Text(
         'Ar Furniture App',
@@ -22,12 +22,12 @@ class _MySplashScreenState  extends State<MySplashScreen> {
            color: Colors.pink,
          )
       ),
-      image: Image.asset('assets/topolino.jpg'),
+      // image: Image.asset('assets/topolino.jpg'),
       backgroundColor: Colors.white,
-      photoSize: 100,
+      // photoSize: 100,
       loaderColor: Colors.red,
       loadingText: Text(
-        'Array[] Yaar',
+        'Hackathon 2021',
         style: TextStyle(
           color: Colors.pinkAccent,
           fontSize: 16.0,

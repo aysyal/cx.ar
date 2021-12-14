@@ -7,40 +7,12 @@ class ItemListScreen extends StatelessWidget {
 
   final List<ItemModel> items = [
     ItemModel(
-      "Chair",
-      "Yellow chair",
+      "Visualize Your order",
+      "visualize along with",
       "images/single_sofa.png",
-      "images/single_sofa_label.png",
-      12000,
+      "recommended items",
+      1282,
     ),
-    ItemModel(
-      "Double Bed",
-      "Double Bed with 2 lamps",
-      "images/bed_double.png",
-      "images/single_sofa_label.png",
-      13999,
-    ),
-    ItemModel(
-      "Grey Sofa",
-      "Grey sofa",
-      "images/sofa_grey.png",
-      "images/single_sofa_label.png",
-      11000,
-    ),
-    ItemModel(
-      "Single Sofa",
-      "White Sofa",
-      "images/sofa_white.png",
-      "images/single_sofa_label.png",
-      10000,
-    ),
-    ItemModel(
-      "Sofa",
-      "Comfortable sofa",
-      "images/_white_sofa.png",
-      "images/single_sofa_label.png",
-      21899,
-    )
   ];
   @override
   Widget build(BuildContext buildContext){
@@ -55,9 +27,8 @@ class ItemListScreen extends StatelessWidget {
              child: Row(
                mainAxisAlignment: MainAxisAlignment.start,
                children: <Widget>[
-                 Text('AR', style: TextStyle(fontSize: 48, color: Colors.white),),
-                 Text(' Orders', style: TextStyle(fontSize: 48, color: Colors.white,fontWeight: FontWeight.w100),),
-                 Text('List', style: TextStyle(fontSize: 48, color: Colors.white,fontWeight: FontWeight.w100),),
+                 Text(' Orders ', style: TextStyle(fontSize: 38, color: Colors.white,fontWeight: FontWeight.w100),),
+                 Text('List', style: TextStyle(fontSize: 38, color: Colors.white,fontWeight: FontWeight.w100),),
                ],
              ),
              ),Expanded(
@@ -87,14 +58,15 @@ class ItemListScreen extends StatelessWidget {
                               Expanded(
                                   child: Column(
                                     children: <Widget>[
-                                      Text(items[index].name, style: TextStyle(fontSize: 16, color: Colors.black),),
+                                      Text(items[index].name, style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.blue),),
                                       Text(items[index].detail, style: TextStyle(fontSize: 10, color: Colors.black87),),
+                                      Text(items[index].label_pic, style: TextStyle(fontSize: 10, color: Colors.black87),),
                                     ],
                                 ),
                               ),
                               Container(
                                 width: 60,
-                                child: Text(items[index].price.toString(), style: TextStyle(fontSize: 14, color: Colors.blueGrey),),
+                                child: Text("#" + items[index].price.toString(), style: TextStyle(fontSize: 14, color: Colors.blueGrey),),
                               )
                             ]
                           ),
