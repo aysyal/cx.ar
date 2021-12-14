@@ -111,12 +111,18 @@ class _ListObjectSelectionState extends State<ListObjectSelection> {
     'assets/TocoToucan.gif',
     'assets/AndroidRobot.gif',
     'assets/ArcticFox.gif',
+    'assets/world_map.gif',
+    'assets/chronopost-delivery.gif',
+    'assets/ezgif.com-gif-maker.gif'
   ];
 
   List<String> objectsFileName = [
     'toucan.sfb',
     'andy.sfb',
     'artic_fox.sfb',
+    'assets/world_map.gltf',
+    'delivery.sfb',
+    'postman.sfb'
   ];
 
   String selected;

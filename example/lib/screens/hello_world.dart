@@ -34,7 +34,7 @@ class _HelloWorldState extends State<HelloWorld> {
   }
 
   Future _addSphere(ArCoreController controller) async {
-    final ByteData textureBytes = await rootBundle.load('assets/earth.jpg');
+    final ByteData textureBytes = await rootBundle.load('assets/world_map.gif');
 
     final material = ArCoreMaterial(
         color: Color.fromARGB(120, 66, 134, 244),
@@ -68,7 +68,8 @@ class _HelloWorldState extends State<HelloWorld> {
   }
 
   Future _addCube(ArCoreController controller) async {
-    final ByteData textureBytes = await rootBundle.load('assets/fb.png');
+    final ByteData textureBytes =
+        await rootBundle.load('assets/ezgif.com-gif-maker.gif');
     final material = ArCoreMaterial(
         color: Color.fromARGB(120, 66, 134, 244),
         textureBytes: textureBytes.buffer.asUint8List());

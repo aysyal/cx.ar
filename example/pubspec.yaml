@@ -48,6 +48,9 @@ flutter:
     - assets/myimages.imgdb
     - assets/topolino.jpg
     - assets/fb.png
+    - assets/ezgif.com-gif-maker.gif
+    - assets/chronopost-delivery.gif
+    - assets/world_map.gif
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
